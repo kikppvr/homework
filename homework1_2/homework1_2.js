@@ -17,7 +17,7 @@ getAllCovidData().then((allCovidData) => {
         }, 0); 
 
         const todayDeaths = allCovidData.filter((country) => country.todayDeaths < 10 && country.population > 100000000).map((country => country.country))
-
+        
         console.log(`คนที่หายจาก Covid วันนี้: ${totalTodayRecovered} คน`)
         console.log(`ประเทศที่มี todayDeaths น้อยกว่า 10 คน และมีประชากรมากกว่า 100,000,000 คน: ${todayDeaths}`)
     }
